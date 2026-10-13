@@ -15,6 +15,25 @@ body{margin:0;background:#FFFFFF}
 a{color:#A8321E}a:hover{color:#7E2414}
 h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,serif}
 input,select,textarea{font:inherit}
+
+.calc-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.calc-tab{font:inherit;font-weight:600;font-size:16px;padding:12px 20px;border-radius:999px;border:2px solid #1F2A30;background:#FFFFFF;color:#1F2A30;cursor:pointer;min-height:44px}
+.calc-tab[aria-selected="true"]{background:#1F2A30;color:#FFFFFF}
+.calc-panel{display:flex;flex-wrap:wrap;gap:32px;background:#FFFFFF;border:1px solid #ECE6DA;border-radius:24px;padding:32px}
+.calc-panel[hidden]{display:none}
+.calc-inputs{flex:1 1 420px;min-width:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px 20px;align-content:start}
+.calc-inputs label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+.calc-inputs input,.calc-inputs select{padding:12px 14px;border:1px solid #B9B2A4;border-radius:10px;font-weight:400;background:#FFFFFF;width:100%}
+.calc-hint{font-weight:400;font-size:13px;color:#5B666B}
+.calc-check{flex-direction:row!important;align-items:center;gap:10px!important;grid-column:1/-1}
+.calc-check input{width:20px;height:20px}
+.calc-results{flex:1 1 300px;min-width:0;background:#F6EFE2;border-radius:18px;padding:28px;align-self:start}
+.calc-big{font-family:'Bricolage Grotesque',Georgia,serif;font-weight:800;font-size:44px;line-height:1.1;margin:4px 0 20px;color:#1F2A30}
+.calc-label{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7E2414;margin:0}
+.calc-rows{margin:0;padding:0;list-style:none;border-top:1px solid #E2D6BF}
+.calc-rows li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #E2D6BF}
+.calc-rows li span:last-child{font-weight:600}
+.calc-note{font-size:14px;color:#3A464C;margin:16px 0 0}
 </style>
 </head>
 <body>
@@ -37,6 +56,7 @@ input,select,textarea{font:inherit}
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; font-weight: 500; font-size: 16px">
 <a href="#loans" style="color: #1F2A30; text-decoration: none">Loan options</a>
 <a href="#process" style="color: #1F2A30; text-decoration: none">How it works</a>
+<a href="#calculators" style="color: #1F2A30; text-decoration: none">Calculators</a>
 <a href="#about" style="color: #1F2A30; text-decoration: none">About Katie</a>
 <a href="#realtors" style="color: #1F2A30; text-decoration: none">For realtors</a>
 <a href="#book" style="color: #1F2A30; text-decoration: none">Book a call</a>
@@ -118,6 +138,102 @@ input,select,textarea{font:inherit}
 </div>
 </section>
 
+<section id="calculators" style="padding: 96px 24px; background: #FBF8F2">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Run the numbers</h2>
+<p style="margin: 0 0 32px; max-width: 40em; color: #3A464C">Get a feel for your payment, your budget, or whether a refinance makes sense. Change any number and the results update instantly.</p>
+<div class="calc-tabs" role="tablist" aria-label="Mortgage calculators">
+<button class="calc-tab" role="tab" id="tab-pc" aria-selected="true" aria-controls="panel-pc" data-calc-tab>Monthly payment</button>
+<button class="calc-tab" role="tab" id="tab-af" aria-selected="false" aria-controls="panel-af" tabindex="-1" data-calc-tab>How much can I afford?</button>
+<button class="calc-tab" role="tab" id="tab-rf" aria-selected="false" aria-controls="panel-rf" tabindex="-1" data-calc-tab>Refinance savings</button>
+</div>
+
+<div class="calc-panel" role="tabpanel" id="panel-pc" aria-labelledby="tab-pc">
+<div class="calc-inputs">
+<label>Home price ($)<input id="pc-price" type="number" inputmode="numeric" min="0" step="1000" value="400000"></label>
+<label>Down payment ($)<input id="pc-down" type="number" inputmode="numeric" min="0" step="1000" value="40000"><span class="calc-hint" id="pc-down-pct"></span></label>
+<label>Loan type<select id="pc-type"><option value="conv">Conventional</option><option value="fha">FHA</option><option value="va">VA</option></select></label>
+<label>Interest rate (%)<input id="pc-rate" type="number" inputmode="decimal" min="0" step="0.125" value="6.5"></label>
+<label>Loan term<select id="pc-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></label>
+<label>Property tax (% per year)<input id="pc-tax" type="number" inputmode="decimal" min="0" step="0.05" value="1.0"></label>
+<label>Home insurance ($ per year)<input id="pc-ins" type="number" inputmode="numeric" min="0" step="100" value="1500"></label>
+<label>HOA dues ($ per month)<input id="pc-hoa" type="number" inputmode="numeric" min="0" step="10" value="0"></label>
+<label>Mortgage insurance (% per year)<input id="pc-mi" type="number" inputmode="decimal" min="0" step="0.05" value="0.5"><span class="calc-hint">PMI, FHA MIP, or 0 for VA</span></label>
+<label>Upfront fee financed (%)<input id="pc-fee" type="number" inputmode="decimal" min="0" step="0.05" value="0"><span class="calc-hint">FHA upfront MIP or VA funding fee</span></label>
+</div>
+<div class="calc-results" aria-live="polite">
+<p class="calc-label">Estimated monthly payment</p>
+<p class="calc-big" id="pc-total">$0</p>
+<ul class="calc-rows">
+<li><span>Principal &amp; interest</span><span id="pc-pi"></span></li>
+<li><span>Property tax</span><span id="pc-tax-out"></span></li>
+<li><span>Home insurance</span><span id="pc-ins-out"></span></li>
+<li><span>Mortgage insurance</span><span id="pc-mi-out"></span></li>
+<li><span>HOA dues</span><span id="pc-hoa-out"></span></li>
+<li><span>Loan amount</span><span id="pc-loan"></span></li>
+<li><span>Total interest over the loan</span><span id="pc-interest"></span></li>
+</ul>
+</div>
+</div>
+
+<div class="calc-panel" role="tabpanel" id="panel-af" aria-labelledby="tab-af" hidden>
+<div class="calc-inputs">
+<label>Yearly income before taxes ($)<input id="af-income" type="number" inputmode="numeric" min="0" step="1000" value="100000"></label>
+<label>Monthly debt payments ($)<input id="af-debts" type="number" inputmode="numeric" min="0" step="25" value="500"><span class="calc-hint">Car, student loans, credit card minimums</span></label>
+<label>Down payment ($)<input id="af-down" type="number" inputmode="numeric" min="0" step="1000" value="40000"></label>
+<label>Interest rate (%)<input id="af-rate" type="number" inputmode="decimal" min="0" step="0.125" value="6.5"></label>
+<label>Loan term<select id="af-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></label>
+<label>Property tax (% per year)<input id="af-tax" type="number" inputmode="decimal" min="0" step="0.05" value="1.0"></label>
+<label>Home insurance ($ per year)<input id="af-ins" type="number" inputmode="numeric" min="0" step="100" value="1500"></label>
+<label>HOA dues ($ per month)<input id="af-hoa" type="number" inputmode="numeric" min="0" step="10" value="0"></label>
+<label>Mortgage insurance (% per year)<input id="af-mi" type="number" inputmode="decimal" min="0" step="0.05" value="0.5"><span class="calc-hint">Applies under 20% down</span></label>
+<label>Housing cost limit (% of income)<input id="af-front" type="number" inputmode="numeric" min="1" max="60" step="1" value="28"></label>
+<label>Total debt limit (% of income)<input id="af-back" type="number" inputmode="numeric" min="1" max="60" step="1" value="36"><span class="calc-hint">Some loans allow more</span></label>
+</div>
+<div class="calc-results" aria-live="polite">
+<p class="calc-label">Comfortable home price</p>
+<div id="af-result-body">
+<p class="calc-big" id="af-price">$0</p>
+<ul class="calc-rows">
+<li><span>Loan amount</span><span id="af-loan"></span></li>
+<li><span>Estimated monthly payment</span><span id="af-payment"></span></li>
+</ul>
+<p class="calc-note" id="af-limit"></p>
+</div>
+<p class="calc-note" id="af-msg" hidden></p>
+</div>
+</div>
+
+<div class="calc-panel" role="tabpanel" id="panel-rf" aria-labelledby="tab-rf" hidden>
+<div class="calc-inputs">
+<label>Current loan balance ($)<input id="rf-balance" type="number" inputmode="numeric" min="0" step="1000" value="300000"></label>
+<label>Current interest rate (%)<input id="rf-cur-rate" type="number" inputmode="decimal" min="0" step="0.125" value="7.25"></label>
+<label>Years left on current loan<input id="rf-cur-years" type="number" inputmode="numeric" min="1" max="40" step="1" value="28"></label>
+<label>New interest rate (%)<input id="rf-new-rate" type="number" inputmode="decimal" min="0" step="0.125" value="6.25"></label>
+<label>New loan term<select id="rf-new-term"><option value="30">30 years</option><option value="20">20 years</option><option value="15">15 years</option></select></label>
+<label>Closing costs ($)<input id="rf-costs" type="number" inputmode="numeric" min="0" step="250" value="6000"></label>
+<label class="calc-check"><input id="rf-roll" type="checkbox"> Add closing costs to the new loan</label>
+</div>
+<div class="calc-results" aria-live="polite">
+<p class="calc-label" id="rf-savings-label">Monthly savings</p>
+<p class="calc-big" id="rf-savings">$0</p>
+<ul class="calc-rows">
+<li><span>Current payment (P&amp;I)</span><span id="rf-cur-pay"></span></li>
+<li><span>New payment (P&amp;I)</span><span id="rf-new-pay"></span></li>
+<li><span>Break-even point</span><span id="rf-breakeven"></span></li>
+<li><span>Interest left on current loan</span><span id="rf-cur-int"></span></li>
+<li><span>Interest on new loan</span><span id="rf-new-int"></span></li>
+</ul>
+</div>
+</div>
+
+<p style="margin: 24px 0 0; font-size: 14px; color: #5B666B; max-width: 60em">Rates and figures shown are examples only, not current rates or a loan offer. Results are estimates for illustration and don't include every cost. Your actual rate, payment, and terms depend on your credit, loan program, property, and other factors. <a href="#book">Talk with me</a> for numbers based on your situation.</p>
+<div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 14px">
+<a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Start my pre-approval</a>
+</div>
+</div>
+</section>
+
 <section id="about" style="padding: 96px 24px">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
 <div style="flex: 1 1 300px; min-width: 0; display: flex; justify-content: center">
@@ -193,5 +309,6 @@ input,select,textarea{font:inherit}
 </footer>
 
 </div>
+<script src="calculators.js"></script>
 </body>
 </html>
