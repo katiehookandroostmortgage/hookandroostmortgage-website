@@ -138,6 +138,76 @@
    "publisher": {
     "@id": "https://hookandroostmortgage.com/#business"
    }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://hookandroostmortgage.com/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What's the difference between a mortgage broker and a bank?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A bank can only offer its own loans. As a mortgage broker, I'm not tied to one lender, so I can shop your loan with many lenders and compare options side by side. You get one point of contact, and I do the legwork of finding a fit for your situation."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get pre-approved, and what will I need?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also start online with the Get pre-approved button."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who qualifies for a VA loan?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "VA loans are for eligible veterans, active duty service members, and some National Guard and Reserve members and surviving spouses. They often don't require a down payment or monthly mortgage insurance. As a veteran and military spouse myself, VA loans are close to my heart, and I'm happy to help you check your eligibility."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I'm a first-time buyer. Where do I start?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start with a conversation, not a house tour. We'll look at your real budget, which loan types fit you, and whether you may qualify for down payment assistance programs. That way you go house hunting knowing your numbers and ready to make a strong offer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much do I need for a down payment?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on the loan. Some programs, like VA loans, may not require a down payment, and others allow a low down payment for qualified buyers. Your down payment also affects your monthly payment and mortgage insurance, so I'll show you a few scenarios and help you choose what makes sense for you."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which states do you work in?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "I'm licensed in Washington and Massachusetts. With the help of my team, I can help you get set up with a home loan in any state except New Jersey."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Should I refinance?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Refinancing can make sense if it lowers your payment, shortens your loan term, removes mortgage insurance, or lets you tap your home's equity for something important. I'll compare your current loan to your options, including closing costs and how long it takes to break even, so you can decide with real numbers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you work with real estate agents?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. I work closely with agents to get buyers pre-approved quickly and keep everyone updated from offer to closing. If you already have an agent, I'll coordinate with them. If you don't, I'm happy to make an introduction."
+     }
+    }
+   ]
   }
  ]
 }
@@ -172,6 +242,13 @@ input,select,textarea{font:inherit}
 .calc-rows li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #E2D6BF}
 .calc-rows li span:last-child{font-weight:600}
 .calc-note{font-size:14px;color:#3A464C;margin:16px 0 0}
+.faq-item{border-bottom:1px solid #E2D6BF}
+.faq-item:first-of-type{border-top:1px solid #E2D6BF}
+.faq-item summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:600;font-size:19px;color:#1F2A30;min-height:44px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:28px;font-weight:400;color:#A8321E;line-height:1;flex:none}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item p{margin:0 0 20px;color:#3A464C;max-width:46em}
 </style>
 </head>
 <body>
@@ -301,6 +378,7 @@ input,select,textarea{font:inherit}
 <a href="#calculators" style="color: #1F2A30; text-decoration: none">Calculators</a>
 <a href="#about" style="color: #1F2A30; text-decoration: none">About Katie</a>
 <a href="#realtors" style="color: #1F2A30; text-decoration: none">For realtors</a>
+<a href="#faq" style="color: #1F2A30; text-decoration: none">FAQ</a>
 <a href="#book" style="color: #1F2A30; text-decoration: none">Book a call</a>
 <a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 999px; font-weight: 600">Get pre-approved</a>
 </nav>
@@ -473,6 +551,45 @@ input,select,textarea{font:inherit}
 <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 14px">
 <a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Start my pre-approval</a>
 </div>
+</div>
+</section>
+
+<section id="faq" style="padding: 96px 24px; background: #F6EFE2">
+<div style="max-width: 900px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Common questions</h2>
+<p style="margin: 0 0 32px; color: #3A464C">Straight answers to what people ask me most. Don't see yours? <a href="#book">Book a call</a> or <a href="#contact">send me a note</a>.</p>
+<details class="faq-item">
+<summary>What's the difference between a mortgage broker and a bank?</summary>
+<p>A bank can only offer its own loans. As a mortgage broker, I'm not tied to one lender, so I can shop your loan with many lenders and compare options side by side. You get one point of contact, and I do the legwork of finding a fit for your situation.</p>
+</details>
+<details class="faq-item">
+<summary>How do I get pre-approved, and what will I need?</summary>
+<p>It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also start online with the Get pre-approved button.</p>
+</details>
+<details class="faq-item">
+<summary>Who qualifies for a VA loan?</summary>
+<p>VA loans are for eligible veterans, active duty service members, and some National Guard and Reserve members and surviving spouses. They often don't require a down payment or monthly mortgage insurance. As a veteran and military spouse myself, VA loans are close to my heart, and I'm happy to help you check your eligibility.</p>
+</details>
+<details class="faq-item">
+<summary>I'm a first-time buyer. Where do I start?</summary>
+<p>Start with a conversation, not a house tour. We'll look at your real budget, which loan types fit you, and whether you may qualify for down payment assistance programs. That way you go house hunting knowing your numbers and ready to make a strong offer.</p>
+</details>
+<details class="faq-item">
+<summary>How much do I need for a down payment?</summary>
+<p>It depends on the loan. Some programs, like VA loans, may not require a down payment, and others allow a low down payment for qualified buyers. Your down payment also affects your monthly payment and mortgage insurance, so I'll show you a few scenarios and help you choose what makes sense for you.</p>
+</details>
+<details class="faq-item">
+<summary>Which states do you work in?</summary>
+<p>I'm licensed in Washington and Massachusetts. With the help of my team, I can help you get set up with a home loan in any state except New Jersey.</p>
+</details>
+<details class="faq-item">
+<summary>Should I refinance?</summary>
+<p>Refinancing can make sense if it lowers your payment, shortens your loan term, removes mortgage insurance, or lets you tap your home's equity for something important. I'll compare your current loan to your options, including closing costs and how long it takes to break even, so you can decide with real numbers.</p>
+</details>
+<details class="faq-item">
+<summary>Do you work with real estate agents?</summary>
+<p>Yes. I work closely with agents to get buyers pre-approved quickly and keep everyone updated from offer to closing. If you already have an agent, I'll coordinate with them. If you don't, I'm happy to make an introduction.</p>
+</details>
 </div>
 </section>
 
