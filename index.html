@@ -265,6 +265,12 @@ input,select,textarea{font:inherit}
 .faq-item summary::after{content:"+";font-size:28px;font-weight:400;color:#A8321E;line-height:1;flex:none}
 .faq-item[open] summary::after{content:"\2212"}
 .faq-item p{margin:0 0 20px;color:#3A464C;max-width:46em}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:0 0 32px}
+.review-grid[hidden]{display:none}
+.review-card{background:#FFFFFF;border:1px solid #ECE6DA;border-radius:24px;padding:28px;margin:0;display:flex;flex-direction:column;gap:12px}
+.review-stars{color:#C98A1B;font-size:20px;letter-spacing:2px;line-height:1}
+.review-card blockquote{margin:0;color:#3A464C}
+.review-card figcaption{font-weight:600;color:#1F2A30;font-size:15px}
 </style>
 </head>
 <body>
@@ -393,6 +399,7 @@ input,select,textarea{font:inherit}
 <a href="#process" style="color: #1F2A30; text-decoration: none">How it works</a>
 <a href="#calculators" style="color: #1F2A30; text-decoration: none">Calculators</a>
 <a href="#about" style="color: #1F2A30; text-decoration: none">About Katie</a>
+<a href="#reviews" style="color: #1F2A30; text-decoration: none">Reviews</a>
 <a href="#realtors" style="color: #1F2A30; text-decoration: none">For realtors</a>
 <a href="#faq" style="color: #1F2A30; text-decoration: none">FAQ</a>
 <a href="#book" style="color: #1F2A30; text-decoration: none">Book a call</a>
@@ -641,6 +648,25 @@ input,select,textarea{font:inherit}
 <p style="margin: 0; color: #3A464C">Fast pre-approvals, clear communication with your buyers, and on-time closings. I'm happy to co-market and support your listings.</p>
 </div>
 <a href="#contact" style="background: #1F2A30; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Partner with me</a>
+</div>
+</section>
+
+<section id="reviews" style="padding: 96px 24px; background: #FBF8F2">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Kind words from my clients.</h2>
+<p style="margin: 0 0 32px; color: #3A464C; max-width: 46em">I'm building this business one family at a time. If we've worked together, a quick Google review helps the next family find me, and I read every one.</p>
+<!-- Client reviews: copy a card below into this grid for each review (exact words, client's permission), then remove the hidden attribute.
+<figure class="review-card"><div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>"Review text here."</blockquote><figcaption>First name L. · VA purchase, Washington</figcaption></figure>
+-->
+<div class="review-grid" id="review-list" hidden></div>
+<div style="background: #FFFFFF; border: 1px solid #ECE6DA; border-radius: 24px; padding: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px">
+<div style="flex: 1 1 420px; min-width: 0">
+<div class="review-stars" aria-hidden="true" style="margin: 0 0 12px">★★★★★</div>
+<h3 style="margin: 0 0 8px; font-size: 26px; line-height: 1.2; color: #1F2A30">Worked with me? Leave a review.</h3>
+<p style="margin: 0; color: #3A464C">It takes about a minute on my Google Business Profile.</p>
+</div>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=Hook+%26+Roost+Mortgage" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Leave a Google review</a>
+</div>
 </div>
 </section>
 
