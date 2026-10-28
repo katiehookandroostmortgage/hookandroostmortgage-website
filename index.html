@@ -39,11 +39,99 @@
    "areaServed": [
     {
      "@type": "State",
-     "name": "Washington"
+     "name": "Washington",
+     "containsPlace": [
+      {
+       "@type": "Place",
+       "name": "Seattle & King County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Tacoma & Pierce County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Everett & Snohomish County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Spokane, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Vancouver & Clark County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Olympia & Thurston County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Kitsap Peninsula, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Bellingham & Whatcom County, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Tri-Cities, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Yakima, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Wenatchee, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Whidbey Island, WA"
+      }
+     ]
     },
     {
      "@type": "State",
-     "name": "Massachusetts"
+     "name": "Massachusetts",
+     "containsPlace": [
+      {
+       "@type": "Place",
+       "name": "Boston & Greater Boston, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "Worcester, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "Springfield & Pioneer Valley, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "Western Mass & the Berkshires, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "North Shore, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "South Shore, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "Cape Cod & the Islands, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "Merrimack Valley, MA"
+      },
+      {
+       "@type": "Place",
+       "name": "MetroWest, MA"
+      }
+     ]
     }
    ],
    "founder": {
@@ -305,6 +393,13 @@ input,select,textarea{font:inherit}
 .review-stars{color:#C98A1B;font-size:20px;letter-spacing:2px;line-height:1}
 .review-card blockquote{margin:0;color:#3A464C}
 .review-card figcaption{font-weight:600;color:#1F2A30;font-size:15px}
+.area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.area-card{background:#FBF8F2;border:1px solid #ECE6DA;border-radius:24px;padding:32px}
+.area-card h3{margin:0 0 8px;font-size:26px;color:#1F2A30}
+.area-card p{margin:0 0 16px;color:#3A464C}
+.area-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
+.area-chips li{background:#FFFFFF;border:1px solid #E2D6BF;border-radius:999px;padding:6px 14px;font-size:15px;color:#1F2A30}
+.area-label{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7E2414;margin:0 0 10px}
 </style>
 </head>
 <body>
@@ -663,6 +758,32 @@ input,select,textarea{font:inherit}
 <summary>Do you work with real estate agents?</summary>
 <p>Yes. I work closely with agents to get buyers pre-approved quickly and keep everyone updated from offer to closing. If you already have an agent, I'll coordinate with them. If you don't, I'm happy to make an introduction.</p>
 </details>
+</div>
+</section>
+
+<section id="areas" style="padding: 96px 24px">
+<div style="max-width: 1200px; margin: 0 auto">
+<h2 style="margin: 0 0 12px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Where I help: all of Washington and Massachusetts.</h2>
+<p style="margin: 0 0 40px; max-width: 46em; color: #3A464C">I'm licensed statewide in both, so whether you're in a big city, a small town, or out in the country, I can help. Here are a few of the places I work with buyers most, including military families stationed nearby.</p>
+<div class="area-grid">
+<div class="area-card">
+<h3>Washington mortgage broker</h3>
+<p>Home loans anywhere in Washington, from Puget Sound to Spokane, including VA loans for military families on PCS orders.</p>
+<p class="area-label">Areas I serve</p>
+<ul class="area-chips"><li>Seattle &amp; King County</li><li>Tacoma &amp; Pierce County</li><li>Everett &amp; Snohomish County</li><li>Spokane</li><li>Vancouver &amp; Clark County</li><li>Olympia &amp; Thurston County</li><li>Kitsap Peninsula</li><li>Bellingham &amp; Whatcom County</li><li>Tri-Cities</li><li>Yakima</li><li>Wenatchee</li><li>Whidbey Island</li></ul>
+<p class="area-label">Military families near</p>
+<ul class="area-chips"><li>Joint Base Lewis-McChord</li><li>Fairchild AFB</li><li>Naval Base Kitsap</li><li>NAS Whidbey Island</li><li>Naval Station Everett</li></ul>
+</div>
+<div class="area-card">
+<h3>Massachusetts mortgage broker</h3>
+<p>Home loans anywhere in Massachusetts, from Boston to the Berkshires, with VA, FHA, USDA and conventional options.</p>
+<p class="area-label">Areas I serve</p>
+<ul class="area-chips"><li>Boston &amp; Greater Boston</li><li>Worcester</li><li>Springfield &amp; Pioneer Valley</li><li>Western Mass &amp; the Berkshires</li><li>North Shore</li><li>South Shore</li><li>Cape Cod &amp; the Islands</li><li>Merrimack Valley</li><li>MetroWest</li></ul>
+<p class="area-label">Military families near</p>
+<ul class="area-chips"><li>Hanscom AFB</li><li>Joint Base Cape Cod</li><li>Westover ARB</li><li>Barnes Air National Guard Base</li></ul>
+</div>
+</div>
+<p style="margin: 32px 0 0; color: #3A464C">Don't see your town? I still cover it. <a href="#book">Book a call</a> and let's talk.</p>
 </div>
 </section>
 
