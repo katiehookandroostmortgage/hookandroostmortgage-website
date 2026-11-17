@@ -288,7 +288,7 @@
      "name": "How do I get pre-approved, and what will I need?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also send me a few details with the quick Check my options form, no account needed, or start a full application with the Get pre-approved button."
+      "text": "It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also send me a few details with the quick Check my options form, no account needed, or start a full application in Edge Home Finance's secure loan portal."
      }
     },
     {
@@ -411,13 +411,33 @@ input,select,textarea{font:inherit}
 .area-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
 .area-chips li{background:#FFFFFF;border:1px solid #E2D6BF;border-radius:999px;padding:6px 14px;font-size:15px;color:#1F2A30}
 .site-header{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #ECE6DA;box-shadow:0 2px 10px rgba(31,42,48,.06)}
-.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;font-weight:500;font-size:16px}
+.hdr-inner{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:24px}
+.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 20px;font-weight:500;font-size:15.5px}
 .site-nav a{color:#1F2A30;text-decoration:none;white-space:nowrap}
-.site-nav a.nav-cta{background:#A8321E;color:#FFFFFF;padding:12px 20px;border-radius:999px;font-weight:600}
-@media (min-width:761px) and (max-width:1150px){.site-nav{gap:8px 16px;font-size:15px}.site-nav a.nav-cta{padding:10px 16px}}
-@media (max-width:760px){.site-header>div{padding:10px 16px!important}.site-nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:18px;font-size:15px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.site-nav::-webkit-scrollbar{display:none}.site-nav a.nav-cta{padding:10px 16px;order:-1}.hero-wrap{padding:40px 20px 56px!important;gap:32px!important}}
-.area-chips a{color:#A8321E;font-weight:600;text-decoration:none}
-.area-chips a:hover{text-decoration:underline}
+.site-nav a:hover{color:#A8321E}
+.nav-cta{background:#A8321E;color:#FFFFFF!important;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600;white-space:nowrap;font-size:15.5px}
+.nav-cta:hover{background:#7E2414}
+.nav-toggle{display:none;font:inherit;font-weight:600;font-size:16px;background:#FFFFFF;color:#1F2A30;border:2px solid #1F2A30;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer;align-items:center;gap:8px}
+.nav-toggle .bars{display:inline-block;width:18px;height:2px;background:currentColor;position:relative}
+.nav-toggle .bars::before,.nav-toggle .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor}
+.nav-toggle .bars::before{top:-6px}.nav-toggle .bars::after{top:6px}
+.mbar{display:none;font-family:'Public Sans',system-ui,sans-serif}
+@media (max-width:1180px){
+ .hdr-inner{justify-content:space-between;flex-wrap:wrap;padding:10px 16px;gap:10px}
+ .nav-toggle{display:inline-flex}
+ .site-nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:8px 0 4px;font-size:17px}
+ .site-nav.open{display:flex}
+ .site-nav a{padding:14px 4px;border-top:1px solid #ECE6DA;min-height:48px}
+}
+@media (max-width:760px){
+ .hero-wrap{padding:36px 20px 56px!important;gap:32px!important}
+ .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#FFFFFF;border-top:1px solid #ECE6DA;box-shadow:0 -2px 12px rgba(31,42,48,.12);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+ .mbar a{flex:1;text-align:center;text-decoration:none;font-weight:600;font-size:16px;padding:14px 8px;border-radius:999px;min-height:48px}
+ .mbar .mb-call{border:2px solid #1F2A30;color:#1F2A30}
+ .mbar .mb-cta{background:#A8321E;color:#FFFFFF}
+ body{padding-bottom:84px}
+ .calc-inputs input,.calc-inputs select,.qs-form input,.qs-form select,.qs-form textarea{min-height:48px;font-size:16px}
+}
 .area-label{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7E2414;margin:0 0 10px}
 .qs-section{padding:80px 24px;background:#1F2A30;color:#FFFFFF}
 .qs-wrap{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
@@ -438,6 +458,7 @@ input,select,textarea{font:inherit}
 .qs-form button{align-self:flex-start;background:#A8321E;color:#FFFFFF;border:0;padding:16px 28px;border-radius:999px;font-weight:600;font-size:17px;cursor:pointer}
 .qs-form button:hover{background:#7E2414}
 .qs-fine{margin:0;font-size:13px;color:#5B666B}
+.qs-fine a{color:#A8321E}
 @media (max-width:760px){.qs-section{padding:56px 16px}.qs-form{padding:24px}}
 </style>
 </head>
@@ -563,33 +584,27 @@ input,select,textarea{font:inherit}
 </div>
 </div>
 
-<header class="site-header">
-<div data-nosnippet style="max-width: 1200px; margin: 0 auto; padding: 12px 24px">
-<nav aria-label="Main" class="site-nav">
-<a href="#loans">Loan options</a>
-<a href="#calculators">Calculators</a>
-<a href="#about">About Katie</a>
-<a href="#reviews">Reviews</a>
-<a href="#realtors">For realtors</a>
-<a href="#faq">FAQ</a>
-<a href="#start">Check my options</a>
-<a href="#book">Book a call</a>
-<a class="nav-cta" href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener">Get pre-approved</a>
-</nav>
-</div>
-</header>
+<header class="site-header"><div class="hdr-inner" data-nosnippet><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span>Menu</button><nav id="site-nav" aria-label="Main" class="site-nav"><a href="/#loans">Loan options</a>
+<a href="/#areas">Areas</a>
+<a href="/#calculators">Calculators</a>
+<a href="/#about">About Katie</a>
+<a href="/#reviews">Reviews</a>
+<a href="/for-realtors/">For realtors</a>
+<a href="/blog/">Blog</a>
+<a href="/#book">Book a call</a>
+<a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener">Instagram</a></nav><a class="nav-cta" href="#start">Check my options</a></div></header>
 
 <section id="top" style="background: #F6EFE2">
 <div class="hero-wrap" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
 <div style="flex: 1 1 520px; min-width: 0">
-<h1 style="margin: 0 0 16px; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.5; letter-spacing: 0.08em; text-transform: uppercase; color: #7E2414">Mortgage broker · Washington &amp; Massachusetts</h1>
+<h1 style="margin: 0 0 16px; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.5; letter-spacing: 0.08em; text-transform: uppercase; color: #7E2414">Mortgage broker in Washington &amp; Massachusetts · VA, FHA, conventional &amp; first-time buyer home loans</h1>
 <p style="margin: 0 0 24px; font-family: 'Bricolage Grotesque', Georgia, serif; font-size: clamp(40px, 6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 800; color: #1F2A30">Hook the Rate.<br>Secure the Roost.</p>
 <p style="margin: 0 0 36px; font-size: 20px; max-width: 34em; color: #3A464C">Straight answers, a clear plan, and a loan officer who picks up the phone. Whether you're buying your first home, moving up, or refinancing, I'll help you find the right loan and a place to settle in.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px">
-<a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 18px">Start my pre-approval</a>
+<a href="#start" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 18px">Check my options</a>
 <a href="#book" style="border: 2px solid #1F2A30; color: #1F2A30; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 18px">Book a free 30-min call</a>
 </div>
-<p style="margin: 16px 0 0; font-size: 16px; color: #3A464C">Not ready for an application? <a href="#start" style="font-weight: 600">Check your options</a> in about a minute, with no account needed, or call or text <a href="tel:4135220497" style="font-weight: 600">413-522-0497</a>.</p>
+<p style="margin: 16px 0 0; font-size: 16px; color: #3A464C">Ready for a full application? <a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="font-weight: 600">Start it here</a>. It opens Edge Home Finance's secure loan portal, where you'll create an account and password first. Questions? Call or text my direct cell, <a href="tel:4135220497" style="font-weight: 600">413-522-0497</a>.</p>
 </div>
 <div style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center">
 <img src="images/katie-hero.jpg" alt="Katie Luis, loan officer at Hook &amp; Roost Mortgage" width="896" height="1088" fetchpriority="high" style="display: block; width: 100%; max-width: 400px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 200px 200px 24px 24px; background: #E7D9BF">
@@ -673,19 +688,19 @@ input,select,textarea{font:inherit}
 <p style="margin: 0 0 48px; max-width: 40em; color: #3A464C">Every buyer's situation is different. Here's where most of my clients start, and I'll help you figure out which fits you best.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">First-time buyers</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/first-time-home-buyers/" style="color: #1F2A30">First-time buyers</a></h3>
 <p style="margin: 0; color: #3A464C">Down payment options, assistance programs, and a step-by-step plan so nothing catches you off guard.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">Conventional loans</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/conventional-loans/" style="color: #1F2A30">Conventional loans</a></h3>
 <p style="margin: 0; color: #3A464C">Flexible terms for buyers with solid credit, with options for a range of down payments.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">FHA loans</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/fha-loans/" style="color: #1F2A30">FHA loans</a></h3>
 <p style="margin: 0; color: #3A464C">Government-backed loans with lower down payment and more flexible credit guidelines.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">VA loans</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/va-loans/" style="color: #1F2A30">VA loans</a></h3>
 <p style="margin: 0; color: #3A464C">For eligible veterans and service members, often with no down payment required.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
@@ -693,15 +708,15 @@ input,select,textarea{font:inherit}
 <p style="margin: 0; color: #3A464C">For homes in eligible rural and suburban areas, with no down payment required for qualified buyers.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">Military &amp; PCS moves</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/jblm-va-loans/" style="color: #1F2A30">Military &amp; PCS moves</a></h3>
 <p style="margin: 0; color: #3A464C">Got orders? I'll help you line up financing on a timeline that works with your move, even from out of state.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">Refinance</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/refinance/" style="color: #1F2A30">Refinance</a></h3>
 <p style="margin: 0; color: #3A464C">Lower your payment, shorten your term, or tap your home's equity when the numbers make sense.</p>
 </div>
 <div style="border: 1px solid #ECE6DA; border-radius: 20px; padding: 32px">
-<h3 style="margin: 0 0 8px; font-size: 24px">Jumbo loans</h3>
+<h3 style="margin: 0 0 8px; font-size: 24px"><a href="/jumbo-loans/" style="color: #1F2A30">Jumbo loans</a></h3>
 <p style="margin: 0; color: #3A464C">Financing for higher-priced homes above standard loan limits.</p>
 </div>
 </div>
@@ -822,7 +837,8 @@ input,select,textarea{font:inherit}
 
 <p style="margin: 24px 0 0; font-size: 14px; color: #5B666B; max-width: 60em">Rates and figures shown are examples only, not current rates or a loan offer. Results are estimates for illustration and don't include every cost. Your actual rate, payment, and terms depend on your credit, loan program, property, and other factors. <a href="#book">Talk with me</a> for numbers based on your situation.</p>
 <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 14px">
-<a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Start my pre-approval</a>
+<a href="#start" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Check my options</a>
+<a href="#book" style="border: 2px solid #1F2A30; color: #1F2A30; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-weight: 600">Book a free call</a>
 </div>
 </div>
 </section>
@@ -837,7 +853,7 @@ input,select,textarea{font:inherit}
 </details>
 <details class="faq-item">
 <summary>How do I get pre-approved, and what will I need?</summary>
-<p>It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also send me a few details with the quick Check my options form, no account needed, or start a full application with the Get pre-approved button.</p>
+<p>It starts with a quick conversation about your goals and budget. From there, I'll ask for the basics, usually recent pay stubs, W-2s or tax returns, bank statements, and permission to check your credit. I'll walk you through exactly what's needed before anything is pulled, so there are no surprises. You can also send me a few details with the quick Check my options form, no account needed, or start a full application in Edge Home Finance's secure loan portal.</p>
 </details>
 <details class="faq-item">
 <summary>Who qualifies for a VA loan?</summary>
@@ -896,8 +912,10 @@ input,select,textarea{font:inherit}
 <ul class="area-chips"><li>Hanscom AFB</li><li>Joint Base Cape Cod</li><li>Westover ARB</li><li>Barnes Air National Guard Base</li></ul>
 </div>
 </div>
-<p class="area-label" style="margin: 32px 0 10px">Local guides</p>
-<ul class="area-chips"><li><a href="/jblm-va-loans/">VA loans near JBLM</a></li><li><a href="/lakewood-wa-mortgage/">Lakewood, WA home loans</a></li><li><a href="/tri-cities-wa-mortgage/">Tri-Cities home loans</a></li><li><a href="/redmond-wa-mortgage/">Redmond &amp; Eastside home loans</a></li></ul>
+<p class="area-label" style="margin: 32px 0 10px">Washington guides</p>
+<ul class="area-chips"><li><a href="/seattle-wa-mortgage/">Seattle</a></li><li><a href="/tacoma-wa-mortgage/">Tacoma</a></li><li><a href="/lakewood-wa-mortgage/">Lakewood</a></li><li><a href="/jblm-va-loans/">VA loans near JBLM</a></li><li><a href="/everett-wa-mortgage/">Everett</a></li><li><a href="/olympia-wa-mortgage/">Olympia</a></li><li><a href="/spokane-wa-mortgage/">Spokane</a></li><li><a href="/tri-cities-wa-mortgage/">Tri-Cities</a></li><li><a href="/redmond-wa-mortgage/">Redmond &amp; Eastside</a></li></ul>
+<p class="area-label" style="margin: 24px 0 10px">Massachusetts guides</p>
+<ul class="area-chips"><li><a href="/boston-ma-mortgage/">Greater Boston</a></li><li><a href="/worcester-ma-mortgage/">Worcester</a></li><li><a href="/springfield-ma-mortgage/">Springfield &amp; Pioneer Valley</a></li><li><a href="/cape-cod-ma-mortgage/">Cape Cod</a></li></ul>
 <p style="margin: 24px 0 0; color: #3A464C">Don't see your town? I still cover it. <a href="#book">Book a call</a> and let's talk.</p>
 </div>
 </section>
@@ -926,7 +944,7 @@ input,select,textarea{font:inherit}
 <h2 style="margin: 0 0 12px; font-size: clamp(28px, 3.4vw, 38px); line-height: 1.15">Realtors: let's get your buyers settled.</h2>
 <p style="margin: 0; color: #3A464C">Fast pre-approvals, clear communication with your buyers, and on-time closings. I'm happy to co-market and support your listings.</p>
 </div>
-<a href="#contact" style="background: #1F2A30; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">Partner with me</a>
+<a href="/for-realtors/" style="background: #1F2A30; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600">See how I work with agents</a>
 </div>
 </section>
 
@@ -963,6 +981,7 @@ input,select,textarea{font:inherit}
 <div style="flex: 1 1 360px; min-width: 0">
 <h2 style="margin: 0 0 16px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Let's get started.</h2>
 <p style="margin: 0 0 32px; color: #3A464C">Send a note and I'll get back to you within one business day, or call me directly.</p>
+<p style="margin: 0 0 4px; color: #3A464C">Call or text my direct cell:</p>
 <p style="margin: 0 0 8px"><a href="tel:4135220497" style="font-weight: 600; font-size: 20px">413-522-0497</a></p>
 <p style="margin: 0 0 8px"><a href="mailto:katie@hookandroostmortgage.com" style="font-weight: 600; font-size: 20px">katie@hookandroostmortgage.com</a></p>
 <p style="margin: 0"><a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="font-weight: 600; font-size: 20px">Instagram @hookandroostmortgage</a></p>
@@ -985,6 +1004,7 @@ input,select,textarea{font:inherit}
 </select></label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px">Message<textarea name="message" rows="4" style="padding: 12px 14px; border: 1px solid #B9B2A4; border-radius: 10px; font-weight: 400; resize: vertical"></textarea></label>
 <button type="submit" style="align-self: flex-start; background: #A8321E; color: #FFFFFF; border: 0; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 17px; cursor: pointer">Send message</button>
+<p style="margin: 0; font-size: 13px; color: #5B666B">By sending, you agree that I can contact you by phone, text or email about your request. See my <a href="/privacy-policy/">privacy policy</a>.</p>
 </form>
 </div>
 </section>
@@ -1112,12 +1132,19 @@ input,select,textarea{font:inherit}
 </div>
 <p style="margin: 0">Katie Luis, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS Consumer Access</a>.</p>
 <p style="margin: 0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs and terms subject to change.</p>
-<p style="margin: 0"><a href="tel:4135220497" style="color: #FFFFFF; font-weight: 600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="color: #FFFFFF; font-weight: 600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="color: #FFFFFF; font-weight: 600">Instagram @hookandroostmortgage</a></p>
+<p style="margin: 0">Call or text my direct cell: <a href="tel:4135220497" style="color: #FFFFFF; font-weight: 600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="color: #FFFFFF; font-weight: 600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="color: #FFFFFF; font-weight: 600">Instagram @hookandroostmortgage</a></p>
+<p style="margin: 0"><a href="/for-realtors/" style="color: #FFFFFF">For realtors</a> · <a href="/blog/" style="color: #FFFFFF">Blog</a> · <a href="/privacy-policy/" style="color: #FFFFFF">Privacy policy</a></p>
 <p style="margin: 0">© 2026 Hook &amp; Roost Mortgage</p>
 </div>
 </footer>
 
 </div>
+<div class="mbar" data-nosnippet><a class="mb-call" href="tel:4135220497">Call or text</a><a class="mb-cta" href="#start">Check my options</a></div>
+<script>
+(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
 <script src="calculators.js"></script>
 </body>
 </html>

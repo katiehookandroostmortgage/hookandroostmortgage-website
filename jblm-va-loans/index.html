@@ -196,13 +196,36 @@ input,select,textarea{font:inherit}
 .area-card p{margin:0 0 16px;color:#3A464C}
 .area-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
 .area-chips li{background:#FFFFFF;border:1px solid #E2D6BF;border-radius:999px;padding:6px 14px;font-size:15px;color:#1F2A30}
-.site-header{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #ECE6DA;box-shadow:0 2px 10px rgba(31,42,48,.06)}
-.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;font-weight:500;font-size:16px}
-.site-nav a{color:#1F2A30;text-decoration:none;white-space:nowrap}
-.site-nav a.nav-cta{background:#A8321E;color:#FFFFFF;padding:12px 20px;border-radius:999px;font-weight:600}
-@media (min-width:761px) and (max-width:1150px){.site-nav{gap:8px 16px;font-size:15px}.site-nav a.nav-cta{padding:10px 16px}}
-@media (max-width:760px){.site-header>div{padding:10px 16px!important}.site-nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:18px;font-size:15px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.site-nav::-webkit-scrollbar{display:none}.site-nav a.nav-cta{padding:10px 16px;order:-1}.hero-wrap{padding:40px 20px 56px!important;gap:32px!important}}
 .area-label{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7E2414;margin:0 0 10px}
+
+.site-header{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #ECE6DA;box-shadow:0 2px 10px rgba(31,42,48,.06)}
+.hdr-inner{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:24px}
+.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 20px;font-weight:500;font-size:15.5px}
+.site-nav a{color:#1F2A30;text-decoration:none;white-space:nowrap}
+.site-nav a:hover{color:#A8321E}
+.nav-cta{background:#A8321E;color:#FFFFFF!important;text-decoration:none;padding:12px 20px;border-radius:999px;font-weight:600;white-space:nowrap;font-size:15.5px}
+.nav-cta:hover{background:#7E2414}
+.nav-toggle{display:none;font:inherit;font-weight:600;font-size:16px;background:#FFFFFF;color:#1F2A30;border:2px solid #1F2A30;border-radius:999px;padding:10px 18px;min-height:44px;cursor:pointer;align-items:center;gap:8px}
+.nav-toggle .bars{display:inline-block;width:18px;height:2px;background:currentColor;position:relative}
+.nav-toggle .bars::before,.nav-toggle .bars::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor}
+.nav-toggle .bars::before{top:-6px}.nav-toggle .bars::after{top:6px}
+.mbar{display:none;font-family:'Public Sans',system-ui,sans-serif}
+@media (max-width:1180px){
+ .hdr-inner{justify-content:space-between;flex-wrap:wrap;padding:10px 16px;gap:10px}
+ .nav-toggle{display:inline-flex}
+ .site-nav{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:8px 0 4px;font-size:17px}
+ .site-nav.open{display:flex}
+ .site-nav a{padding:14px 4px;border-top:1px solid #ECE6DA;min-height:48px}
+}
+@media (max-width:760px){
+ .hero-wrap{padding:36px 20px 56px!important;gap:32px!important}
+ .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#FFFFFF;border-top:1px solid #ECE6DA;box-shadow:0 -2px 12px rgba(31,42,48,.12);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:10px}
+ .mbar a{flex:1;text-align:center;text-decoration:none;font-weight:600;font-size:16px;padding:14px 8px;border-radius:999px;min-height:48px}
+ .mbar .mb-call{border:2px solid #1F2A30;color:#1F2A30}
+ .mbar .mb-cta{background:#A8321E;color:#FFFFFF}
+ body{padding-bottom:84px}
+ .calc-inputs input,.calc-inputs select,.qs-form input,.qs-form select,.qs-form textarea{min-height:48px;font-size:16px}
+}
 
 body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px;line-height:1.6}
 .wrap{max-width:1200px;margin:0 auto}
@@ -211,7 +234,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 .crumbs{font-size:14px;margin:0 0 20px;color:#5B666B}
 .crumbs a{color:#5B666B}
 .pg-kicker{margin:0 0 14px;font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#7E2414}
-.pg-hero h1{margin:0 0 20px;font-size:clamp(38px,5.5vw,62px);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+.pg-hero h1{margin:0 0 20px;font-size:clamp(36px,5.5vw,60px);line-height:1.06;letter-spacing:-.02em;font-weight:800}
 .pg-lead{font-size:20px;color:#3A464C;margin:0 0 32px;max-width:36em}
 .btns{display:flex;flex-wrap:wrap;gap:14px}
 .btn{background:#A8321E;color:#FFFFFF;text-decoration:none;padding:16px 28px;border-radius:999px;font-weight:600;font-size:18px}
@@ -225,18 +248,32 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 .card{background:#FFFFFF;border:1px solid #ECE6DA;border-radius:20px;padding:28px}
 .card h3{margin:0 0 8px;font-size:22px;line-height:1.25}
 .card p{margin:0;color:#3A464C}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
 .fee-table{width:100%;max-width:720px;border-collapse:collapse;margin:0 0 16px;background:#FFFFFF;border-radius:16px;overflow:hidden}
 .fee-table th,.fee-table td{text-align:left;padding:12px 16px;border-bottom:1px solid #ECE6DA}
 .fee-table th{background:#F6EFE2;font-size:15px}
 .note{font-size:14px;color:#5B666B;max-width:60em}
 .faq{max-width:900px}
+.more-h{margin:24px 0 10px;font-weight:600}
 .more-links{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
 .more-links a{display:inline-block;background:#FFFFFF;border:1px solid #E2D6BF;border-radius:999px;padding:8px 16px;color:#1F2A30;text-decoration:none;font-weight:500}
 .more-links a:hover{border-color:#A8321E;color:#A8321E}
+.article{max-width:760px;margin:0 auto}
+.article h2{font-size:clamp(26px,3vw,34px);line-height:1.15;margin:40px 0 12px}
+.article h3{font-size:22px;margin:28px 0 8px}
+.article p,.article li{color:#3A464C}
+.article table{margin:16px 0}
+.post-list{display:grid;gap:24px;max-width:900px}
+.post-card{display:block;background:#FFFFFF;border:1px solid #ECE6DA;border-radius:20px;padding:28px;text-decoration:none;color:#1F2A30}
+.post-card:hover{border-color:#A8321E}
+.post-card h2{font-size:26px;margin:4px 0 8px}
+.post-card p{margin:0;color:#3A464C}
+.post-meta{font-size:14px;color:#5B666B;margin:0}
 .site-foot{background:#1F2A30;color:#D5DCDF;padding:48px 24px;font-size:14px;line-height:1.7}
 .site-foot a{color:#FFFFFF}
 .site-foot .wrap{display:flex;flex-direction:column;gap:14px}
 .powered{align-self:flex-start;display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;background:#FFFFFF;border-radius:16px;padding:10px 18px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#283469}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0;padding:0;list-style:none}
 .qs-section{padding:80px 24px;background:#1F2A30;color:#FFFFFF}
 .qs-wrap{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
 .qs-intro{flex:1 1 340px;min-width:0}
@@ -256,6 +293,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 .qs-form button{align-self:flex-start;background:#A8321E;color:#FFFFFF;border:0;padding:16px 28px;border-radius:999px;font-weight:600;font-size:17px;cursor:pointer}
 .qs-form button:hover{background:#7E2414}
 .qs-fine{margin:0;font-size:13px;color:#5B666B}
+.qs-fine a{color:#A8321E}
 @media (max-width:760px){.qs-section{padding:56px 16px}.qs-form{padding:24px}}
 </style>
 </head>
@@ -374,14 +412,15 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <line x1="260" y1="360" x2="292" y2="360" stroke="#A8321E" stroke-width="2"></line>
 <text x="180" y="365" text-anchor="middle" font-family="Work Sans, sans-serif" font-weight="600" font-size="14" letter-spacing="7" fill="#1E3A4A">MORTGAGE</text>
 </svg></a></div></div>
-<header class="site-header"><div data-nosnippet style="max-width: 1200px; margin: 0 auto; padding: 12px 24px"><nav aria-label="Main" class="site-nav">
-<a href="/#loans">Loan options</a>
+<header class="site-header"><div class="hdr-inner" data-nosnippet><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span>Menu</button><nav id="site-nav" aria-label="Main" class="site-nav"><a href="/#loans">Loan options</a>
+<a href="/#areas">Areas</a>
 <a href="/#calculators">Calculators</a>
 <a href="/#about">About Katie</a>
 <a href="/#reviews">Reviews</a>
-<a href="/#faq">FAQ</a>
-<a href="#start">Check my options</a>
-<a class="nav-cta" href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener">Get pre-approved</a></nav></div></header>
+<a href="/for-realtors/">For realtors</a>
+<a href="/blog/">Blog</a>
+<a href="/#book">Book a call</a>
+<a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener">Instagram</a></nav><a class="nav-cta" href="#start">Check my options</a></div></header>
 <main>
 <section class="pg-hero"><div class="wrap">
 <p class="crumbs"><a href="/">Home</a> › VA loans near JBLM</p>
@@ -389,6 +428,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <h1>Got orders to JBLM? Let's get you home.</h1>
 <p class="pg-lead">I'm an Army veteran and an Air Force spouse, so I know what a PCS feels like from the inside: tight timelines, a house you haven't seen in person, and a hundred other things on your plate. I'll help you line up a VA loan (or whatever fits you best) so you can buy near JBLM with confidence, even before you arrive.</p>
 <div class="btns"><a class="btn" href="#start">Check my options</a><a class="btn-ghost" href="/#book">Book a free 30-min call</a></div>
+<p style="margin: 16px 0 0; font-size: 16px; color: #3A464C">Ready for a full application? <a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="font-weight: 600">Start it here</a>. It opens Edge Home Finance's secure loan portal, where you'll create an account and password first. Questions? Call or text my direct cell, <a href="tel:4135220497" style="font-weight: 600">413-522-0497</a>.</p>
 </div></section>
 <section class="pg-sec"><div class="wrap">
 <h2>Why so many JBLM families buy with a VA loan</h2>
@@ -450,7 +490,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <ul class="qs-points">
 <li>I'll look at which loan types fit you, including VA, FHA, USDA, conventional and down payment assistance</li>
 <li>You'll hear from me, not a call center</li>
-<li>Prefer to talk now? <a href="/#book">Book a call</a> or call <a href="tel:4135220497">413-522-0497</a></li>
+<li>Prefer to talk now? <a href="/#book">Book a call</a>, or call or text my direct cell at <a href="tel:4135220497">413-522-0497</a></li>
 </ul>
 </div>
 <form name="quick-start" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="company" class="qs-form">
@@ -506,7 +546,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 </div>
 <label>Anything else I should know? <span class="qs-opt">(optional)</span><textarea name="message" rows="3" placeholder="PCS orders, a town you love, a credit question..."></textarea></label>
 <button type="submit">Send to Katie</button>
-<p class="qs-fine">This isn't a loan application and won't affect your credit. By sending, you agree that I can contact you by phone, text or email about your request.</p>
+<p class="qs-fine">This isn't a loan application and won't affect your credit. By sending, you agree that I can contact you by phone, text or email about your request. See my <a href="/privacy-policy/">privacy policy</a>.</p>
 </form>
 </div>
 </section>
@@ -520,22 +560,19 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <details class="faq-item"><summary>My spouse will be house hunting without me. Is that OK?</summary><p>Yes, this happens all the time. We&#x27;ll plan ahead for signatures, and in some cases a power of attorney specific to the purchase may be needed. Let me know your situation early so we can set it up correctly.</p></details>
 <details class="faq-item"><summary>Do you only do VA loans?</summary><p>Not at all. I help first-time buyers, move-up buyers and people refinancing with VA, FHA, USDA, conventional and jumbo loans. As a veteran and military spouse, VA loans are just close to my heart.</p></details>
 </div></section>
-<section class="pg-sec alt"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
+<section class="pg-sec alt"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
 <img src="/images/katie-about.jpg" alt="Katie Luis, loan officer at Hook &amp; Roost Mortgage" width="896" height="1088" loading="lazy" style="width:180px;height:220px;object-fit:cover;object-position:center top;border-radius:20px;flex:0 0 auto">
 <div style="flex:1 1 420px;min-width:0"><h2>Hi, I'm Katie.</h2>
 <p class="intro" style="margin-bottom:16px">I'm an Army veteran, an Air Force spouse and a mom of two living here in Washington. As a mortgage broker, I'm not tied to one bank, so I shop your loan with many lenders to find the fit for you. I'll be upfront about what's next, quick to answer, and in your corner from first call to closing day.</p>
-<p style="margin:0 0 24px"><a href="/#about">More about me</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener">Follow along on Instagram @hookandroostmortgage</a></p>
-<p style="margin:0 0 10px;font-weight:600">More places I help</p><ul class="more-links">
-<li><a href="/lakewood-wa-mortgage/">Lakewood, WA</a></li>
-<li><a href="/tri-cities-wa-mortgage/">Tri-Cities, WA</a></li>
-<li><a href="/redmond-wa-mortgage/">Redmond, WA</a></li>
-<li><a href="/#areas">All of Washington &amp; Massachusetts</a></li></ul></div></div></section>
+<p style="margin:0 0 8px"><a href="/#about">More about me</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener">Follow along on Instagram @hookandroostmortgage</a></p>
+<p class="more-h">Loan options</p><ul class="more-links"><li><a href="/va-loans/">VA loans</a></li><li><a href="/fha-loans/">FHA loans</a></li><li><a href="/conventional-loans/">Conventional loans</a></li><li><a href="/first-time-home-buyers/">First-time buyers</a></li><li><a href="/jumbo-loans/">Jumbo loans</a></li><li><a href="/refinance/">Refinance</a></li></ul><p class="more-h">Washington</p><ul class="more-links"><li><a href="/seattle-wa-mortgage/">Seattle</a></li><li><a href="/tacoma-wa-mortgage/">Tacoma</a></li><li><a href="/everett-wa-mortgage/">Everett</a></li><li><a href="/olympia-wa-mortgage/">Olympia</a></li><li><a href="/spokane-wa-mortgage/">Spokane</a></li><li><a href="/lakewood-wa-mortgage/">Lakewood</a></li><li><a href="/redmond-wa-mortgage/">Redmond & Eastside</a></li><li><a href="/tri-cities-wa-mortgage/">Tri-Cities</a></li></ul><p class="more-h">Massachusetts</p><ul class="more-links"><li><a href="/boston-ma-mortgage/">Boston</a></li><li><a href="/worcester-ma-mortgage/">Worcester</a></li><li><a href="/springfield-ma-mortgage/">Springfield & Pioneer Valley</a></li><li><a href="/cape-cod-ma-mortgage/">Cape Cod</a></li></ul></div></div></section>
 </main>
-<footer class="site-foot"><div class="wrap">
-<div class="powered"><span>Powered by</span><img src="/images/edge-logo.png" alt="Edge Home Finance" width="306" height="88" loading="lazy" style="display:block;height:36px;width:auto"><span style="letter-spacing:.02em">NMLS #891464</span></div>
-<p style="margin:0"><a href="tel:4135220497" style="font-weight:600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="font-weight:600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="font-weight:600">Instagram @hookandroostmortgage</a></p>
-<p style="margin:0">Katie Luis, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a>.</p>
-<p style="margin:0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs, fees, limits and terms are subject to change. Not affiliated with or endorsed by the U.S. Department of Veterans Affairs or any branch of the military.</p>
-<p style="margin:0">© 2026 Hook &amp; Roost Mortgage</p></div></footer>
+<footer class="site-foot"><div class="wrap"><div class="powered"><span>Powered by</span><img src="/images/edge-logo.png" alt="Edge Home Finance" width="306" height="88" loading="lazy" style="display:block;height:36px;width:auto"><span style="letter-spacing:.02em">NMLS #891464</span></div><p style="margin:0">Call or text my direct cell: <a href="tel:4135220497" style="font-weight:600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="font-weight:600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="font-weight:600">Instagram @hookandroostmortgage</a></p><ul class="foot-links"><li><a href="/">Home</a></li><li><a href="/#loans">Loan options</a></li><li><a href="/#areas">Areas I serve</a></li><li><a href="/for-realtors/">For realtors</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacy-policy/">Privacy policy</a></li></ul><p style="margin:0">Katie Luis, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a>.</p><p style="margin:0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs, fees, limits and terms are subject to change. Not affiliated with or endorsed by the U.S. Department of Veterans Affairs, HUD, USDA or any branch of the military.</p><p style="margin:0">© 2026 Hook &amp; Roost Mortgage</p></div></footer>
+<div class="mbar" data-nosnippet><a class="mb-call" href="tel:4135220497">Call or text</a><a class="mb-cta" href="#start">Check my options</a></div>
+<script>
+(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
 </body>
 </html>
