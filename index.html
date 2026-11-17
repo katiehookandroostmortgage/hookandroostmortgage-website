@@ -51,6 +51,14 @@
       },
       {
        "@type": "Place",
+       "name": "Lakewood, WA"
+      },
+      {
+       "@type": "Place",
+       "name": "Redmond & the Eastside, WA"
+      },
+      {
+       "@type": "Place",
        "name": "Everett & Snohomish County, WA"
       },
       {
@@ -326,7 +334,7 @@
      "name": "Which states do you work in?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "I'm licensed in Washington and Massachusetts. With the help of my team, I can help you get set up with a home loan in any state except New Jersey."
+      "text": "I'm licensed in Washington and Massachusetts. Buying in another state? Through my team at Edge Home Finance, I can get you connected with help in every state except New Jersey."
      }
     },
     {
@@ -355,8 +363,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&amp;family=Public+Sans:wght@400;500;600&amp;family=Bitter:wght@800&amp;family=Work+Sans:wght@600&amp;display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 *{box-sizing:border-box}
+img{max-width:100%;height:auto}
 body{margin:0;background:#FFFFFF}
 a{color:#A8321E}a:hover{color:#7E2414}
 h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,serif}
@@ -399,6 +408,11 @@ input,select,textarea{font:inherit}
 .area-card p{margin:0 0 16px;color:#3A464C}
 .area-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;padding:0;list-style:none}
 .area-chips li{background:#FFFFFF;border:1px solid #E2D6BF;border-radius:999px;padding:6px 14px;font-size:15px;color:#1F2A30}
+.site-header{position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #ECE6DA;box-shadow:0 2px 10px rgba(31,42,48,.06)}
+.site-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 24px;font-weight:500;font-size:16px}
+.site-nav a{color:#1F2A30;text-decoration:none;white-space:nowrap}
+.site-nav a.nav-cta{background:#A8321E;color:#FFFFFF;padding:12px 20px;border-radius:999px;font-weight:600}
+@media (max-width:760px){.site-header>div{padding:10px 16px!important}.site-nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:18px;font-size:15px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.site-nav::-webkit-scrollbar{display:none}.site-nav a.nav-cta{padding:10px 16px;order:-1}.hero-wrap{padding:40px 20px 56px!important;gap:32px!important}}
 .area-label{font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#7E2414;margin:0 0 10px}
 </style>
 </head>
@@ -406,8 +420,8 @@ input,select,textarea{font:inherit}
 <div style="font-family: 'Public Sans', system-ui, sans-serif; color: #1F2A30; background: #FFFFFF; font-size: 17px; line-height: 1.6">
 
 <div data-nosnippet style="background: #F6EFE2; border-bottom: 1px solid #ECE6DA">
-<div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 12px; display: flex; justify-content: center">
-<a href="#top" aria-label="Hook &amp; Roost Mortgage, home" style="display: block"><svg viewBox="0 0 360 380" width="220" height="232" role="img" aria-label="Hook &amp; Roost Mortgage logo" style="display: block">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px 6px; display: flex; justify-content: center">
+<a href="#top" aria-label="Hook &amp; Roost Mortgage, home" style="display: block"><svg viewBox="0 0 360 380" width="140" height="148" role="img" aria-label="Hook &amp; Roost Mortgage logo" style="display: block">
 <defs>
 <path id="bnr-roostArch" d="M40 196 A140 140 0 0 1 320 196"></path>
 <pattern id="bnr-roostShingles" width="12" height="9" patternUnits="userSpaceOnUse">
@@ -524,32 +538,33 @@ input,select,textarea{font:inherit}
 </div>
 </div>
 
-<header style="border-bottom: 1px solid #ECE6DA; background: #FFFFFF">
-<div data-nosnippet style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px">
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 24px; font-weight: 500; font-size: 16px">
-<a href="#loans" style="color: #1F2A30; text-decoration: none">Loan options</a>
-<a href="#process" style="color: #1F2A30; text-decoration: none">How it works</a>
-<a href="#calculators" style="color: #1F2A30; text-decoration: none">Calculators</a>
-<a href="#about" style="color: #1F2A30; text-decoration: none">About Katie</a>
-<a href="#reviews" style="color: #1F2A30; text-decoration: none">Reviews</a>
-<a href="#realtors" style="color: #1F2A30; text-decoration: none">For realtors</a>
-<a href="#faq" style="color: #1F2A30; text-decoration: none">FAQ</a>
-<a href="#book" style="color: #1F2A30; text-decoration: none">Book a call</a>
-<a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 12px 20px; border-radius: 999px; font-weight: 600">Get pre-approved</a>
+<header class="site-header">
+<div data-nosnippet style="max-width: 1200px; margin: 0 auto; padding: 12px 24px">
+<nav aria-label="Main" class="site-nav">
+<a href="#loans">Loan options</a>
+<a href="#process">How it works</a>
+<a href="#calculators">Calculators</a>
+<a href="#about">About Katie</a>
+<a href="#reviews">Reviews</a>
+<a href="#realtors">For realtors</a>
+<a href="#faq">FAQ</a>
+<a href="#book">Book a call</a>
+<a class="nav-cta" href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener">Get pre-approved</a>
 </nav>
 </div>
 </header>
 
 <section id="top" style="background: #F6EFE2">
-<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div class="hero-wrap" style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 72px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
 <div style="flex: 1 1 520px; min-width: 0">
 <h1 style="margin: 0 0 16px; font-family: 'Public Sans', sans-serif; font-weight: 600; font-size: 15px; line-height: 1.5; letter-spacing: 0.08em; text-transform: uppercase; color: #7E2414">Mortgage broker · Washington &amp; Massachusetts</h1>
 <p style="margin: 0 0 24px; font-family: 'Bricolage Grotesque', Georgia, serif; font-size: clamp(40px, 6vw, 68px); line-height: 1.04; letter-spacing: -0.02em; font-weight: 800; color: #1F2A30">Hook the Rate.<br>Secure the Roost.</p>
 <p style="margin: 0 0 36px; font-size: 20px; max-width: 34em; color: #3A464C">Straight answers, a clear plan, and a loan officer who picks up the phone. Whether you're buying your first home, moving up, or refinancing, I'll help you find the right loan and a place to settle in.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px">
 <a href="https://edge.my1003app.com/2826935/register?time=1787072188167" target="_blank" rel="noopener" style="background: #A8321E; color: #FFFFFF; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-weight: 600; font-size: 18px">Start my pre-approval</a>
-<a href="tel:4135220497" style="border: 2px solid #1F2A30; color: #1F2A30; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 18px">Call 413-522-0497</a>
+<a href="#book" style="border: 2px solid #1F2A30; color: #1F2A30; text-decoration: none; padding: 14px 26px; border-radius: 999px; font-weight: 600; font-size: 18px">Book a free 30-min call</a>
 </div>
+<p style="margin: 16px 0 0; font-size: 16px; color: #3A464C">Rather talk first? Booking a call takes a minute, with no account needed. Or call or text <a href="tel:4135220497" style="font-weight: 600">413-522-0497</a>.</p>
 </div>
 <div style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center">
 <img src="images/katie-hero.jpg" alt="Katie Luis, loan officer at Hook &amp; Roost Mortgage" width="896" height="1088" fetchpriority="high" style="display: block; width: 100%; max-width: 400px; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 200px 200px 24px 24px; background: #E7D9BF">
@@ -751,7 +766,7 @@ input,select,textarea{font:inherit}
 </details>
 <details class="faq-item">
 <summary>Which states do you work in?</summary>
-<p>I'm licensed in Washington and Massachusetts. With the help of my team, I can help you get set up with a home loan in any state except New Jersey.</p>
+<p>I'm licensed in Washington and Massachusetts. Buying in another state? Through my team at Edge Home Finance, I can get you connected with help in every state except New Jersey.</p>
 </details>
 <details class="faq-item">
 <summary>Should I refinance?</summary>
@@ -773,7 +788,7 @@ input,select,textarea{font:inherit}
 <h3>Washington mortgage broker</h3>
 <p>Home loans anywhere in Washington, from Puget Sound to Spokane, for first-time buyers, move-up buyers, and refinances.</p>
 <p class="area-label">Areas I serve</p>
-<ul class="area-chips"><li>Seattle &amp; King County</li><li>Tacoma &amp; Pierce County</li><li>Everett &amp; Snohomish County</li><li>Spokane</li><li>Vancouver &amp; Clark County</li><li>Olympia &amp; Thurston County</li><li>Kitsap Peninsula</li><li>Bellingham &amp; Whatcom County</li><li>Tri-Cities</li><li>Yakima</li><li>Wenatchee</li><li>Whidbey Island</li></ul>
+<ul class="area-chips"><li>Seattle &amp; King County</li><li>Tacoma &amp; Pierce County</li><li>Lakewood</li><li>Redmond &amp; the Eastside</li><li>Everett &amp; Snohomish County</li><li>Spokane</li><li>Vancouver &amp; Clark County</li><li>Olympia &amp; Thurston County</li><li>Kitsap Peninsula</li><li>Bellingham &amp; Whatcom County</li><li>Tri-Cities</li><li>Yakima</li><li>Wenatchee</li><li>Whidbey Island</li></ul>
 <p class="area-label">Military families near</p>
 <ul class="area-chips"><li>Joint Base Lewis-McChord</li><li>Fairchild AFB</li><li>Naval Base Kitsap</li><li>NAS Whidbey Island</li><li>Naval Station Everett</li></ul>
 </div>
@@ -800,7 +815,7 @@ input,select,textarea{font:inherit}
 <p style="margin: 0 0 16px; color: #3A464C">I've spent more than 20 years helping people, first in healthcare and then in the U.S. Army, where I served as an optical laboratory technician. When my family bought our home, a family friend handled our mortgage, and the whole thing went so smoothly that I couldn't stop thinking about it. After three years of talking everyone's ear off about mortgages, I finally made the leap. Of all the work I've done since leaving the military, this feels the most meaningful, because I get to help so many families with one of the biggest moves of their lives.</p>
 <p style="margin: 0 0 16px; color: #3A464C">I'll treat you like family. Buying a home can feel overwhelming, and my job is to take that weight off your shoulders and make it exciting, the way it should be. I'll be upfront about what's coming next, and if I don't know an answer, I'll tell you and then go find it. I'm quick to respond, and I'll check in along the way. Honestly, I'll even send you homes I think you'll love, because that part is fun for me.</p>
 <p style="margin: 0 0 16px; color: #3A464C">As a mortgage broker, I'm not tied to one bank. I can shop your loan with many lenders to find options that fit you. Before we talk pre-approval, I'll walk you through the process and help you understand your real budget, so you go house hunting set up for success. My goal is to know every loan type inside and out, and as a veteran and military spouse, I have a special place in my heart for VA buyers.</p>
-<p style="margin: 0 0 24px; color: #3A464C">I live in Washington with my husband, who's active duty in the Air Force, and our two kids. That's where the name comes from. "Hook" is for our family's love of fishing, boating, and camping. "Roost" is for my backyard flock of hens. I'm licensed in Washington and Massachusetts, and with the help of my team, I can help you get set up in any state except New Jersey.</p>
+<p style="margin: 0 0 24px; color: #3A464C">I live in Washington with my husband, who's active duty in the Air Force, and our two kids. That's where the name comes from. "Hook" is for our family's love of fishing, boating, and camping. "Roost" is for my backyard flock of hens. I'm licensed in Washington and Massachusetts, and through my team at Edge Home Finance I can get you connected with help in every state except New Jersey.</p>
 <p style="margin: 0; font-weight: 600">Katie Luis · Loan Officer · NMLS #2826935</p>
 </div>
 </div>
@@ -850,7 +865,8 @@ input,select,textarea{font:inherit}
 <div style="flex: 1 1 360px; min-width: 0">
 <h2 style="margin: 0 0 16px; font-size: clamp(32px, 4vw, 46px); line-height: 1.1; letter-spacing: -0.015em">Let's get started.</h2>
 <p style="margin: 0 0 32px; color: #3A464C">Send a note and I'll get back to you within one business day, or call me directly.</p>
-<p style="margin: 0"><a href="tel:4135220497" style="font-weight: 600; font-size: 20px">413-522-0497</a></p>
+<p style="margin: 0 0 8px"><a href="tel:4135220497" style="font-weight: 600; font-size: 20px">413-522-0497</a></p>
+<p style="margin: 0"><a href="mailto:katie@hookandroostmortgage.com" style="font-weight: 600; font-size: 20px">katie@hookandroostmortgage.com</a></p>
 </div>
 <form name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="company" style="flex: 1 1 520px; min-width: 0; background: #FFFFFF; border-radius: 24px; padding: 40px; display: flex; flex-direction: column; gap: 20px">
 <input type="hidden" name="form-name" value="contact">
@@ -995,8 +1011,9 @@ input,select,textarea{font:inherit}
 <img src="images/edge-logo.png" alt="Edge Home Finance" width="306" height="88" loading="lazy" style="display: block; height: 36px; width: auto">
 <span style="letter-spacing: 0.02em">NMLS #891464</span>
 </div>
-<p style="margin: 0">Katie Luis, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #2826935</a>. Licensed in Washington and Massachusetts. Loan assistance available in all states except New Jersey. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS Consumer Access</a>.</p>
+<p style="margin: 0">Katie Luis, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener" style="color: #D5DCDF">NMLS Consumer Access</a>.</p>
 <p style="margin: 0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs and terms subject to change.</p>
+<p style="margin: 0"><a href="tel:4135220497" style="color: #FFFFFF; font-weight: 600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="color: #FFFFFF; font-weight: 600">katie@hookandroostmortgage.com</a></p>
 <p style="margin: 0">© 2026 Hook &amp; Roost Mortgage</p>
 </div>
 </footer>
