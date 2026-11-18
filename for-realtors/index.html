@@ -255,6 +255,21 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 .qs-fine{margin:0;font-size:13px;color:#5B666B}
 .qs-fine a{color:#A8321E}
 @media (max-width:760px){.qs-section{padding:56px 16px}.qs-form{padding:24px}}
+
+.agent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin:0 0 32px}
+.agent{background:#FFFFFF;border:1px solid #ECE6DA;border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:6px}
+.agent-photo{width:112px;height:112px;border-radius:50%;object-fit:cover;margin:0 0 10px;background:#F6EFE2}
+.agent-initials{width:112px;height:112px;border-radius:50%;margin:0 0 10px;background:#F6EFE2;color:#7E2414;display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:700;letter-spacing:.02em}
+.agent h3{margin:0;font-size:22px;line-height:1.25}
+.agent-role{margin:0;font-weight:600;color:#3A464C;font-size:15px}
+.agent-area{margin:0;color:#7E2414;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.agent-desc{margin:6px 0 10px;color:#3A464C}
+.agent-contact{margin:auto 0 0;display:flex;flex-direction:column;gap:4px;font-size:16px;word-break:break-word}
+.agent-contact a{color:#A8321E;font-weight:600;text-decoration:none;min-height:28px}
+.agent-contact a:hover{text-decoration:underline}
+.intro-box{background:#F6EFE2;border-radius:20px;padding:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.intro-box p{margin:0;max-width:40em;color:#3A464C}
+.agent-note{font-size:13px;color:#5B666B;margin:16px 0 0}
 </style>
 </head>
 <body>
@@ -417,13 +432,14 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <div class="card"><h3>Community events</h3><p>From holiday drives to homebuyer nights, I'm always up for partnering on events that bring neighbors together.</p></div>
 <div class="card"><h3>Buyer education</h3><p>Happy to explain VA loans, down payment assistance and first-time buyer programs to your clients, in person or online.</p></div>
 </div>
-<p class="note" style="margin-top:20px">All co-marketing is set up to follow RESPA and advertising guidelines, with costs shared fairly.</p>
+<p style="margin:24px 0 0"><a href="/realtors/">Meet the agents I trust</a></p><p class="note" style="margin-top:20px">All co-marketing is set up to follow RESPA and advertising guidelines, with costs shared fairly.</p>
 </div></section>
 <section class="pg-sec alt"><div class="wrap">
 <h2>Where I work</h2>
 <p class="intro">I'm licensed in Washington and Massachusetts, statewide. For buyers in other states (except New Jersey), assistance is available through Edge Home Finance.</p>
 <ul class="more-links"><li><a href="/seattle-wa-mortgage/">Seattle</a></li><li><a href="/tacoma-wa-mortgage/">Tacoma</a></li><li><a href="/lakewood-wa-mortgage/">Lakewood</a></li><li><a href="/jblm-va-loans/">JBLM</a></li><li><a href="/everett-wa-mortgage/">Everett</a></li><li><a href="/olympia-wa-mortgage/">Olympia</a></li><li><a href="/spokane-wa-mortgage/">Spokane</a></li><li><a href="/tri-cities-wa-mortgage/">Tri-Cities</a></li><li><a href="/redmond-wa-mortgage/">Redmond</a></li><li><a href="/boston-ma-mortgage/">Boston</a></li><li><a href="/worcester-ma-mortgage/">Worcester</a></li><li><a href="/springfield-ma-mortgage/">Springfield</a></li><li><a href="/cape-cod-ma-mortgage/">Cape Cod</a></li></ul>
 </div></section>
+
 <section id="start" class="qs-section">
 <div class="qs-wrap">
 <div class="qs-intro">
@@ -480,7 +496,7 @@ body{font-family:'Public Sans',system-ui,sans-serif;color:#1F2A30;font-size:17px
 <p style="margin:0 0 8px"><a href="/#about">More about me</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener">Follow along on Instagram @hookandroostmortgage</a></p>
 <p class="more-h">Loan options</p><ul class="more-links"><li><a href="/va-loans/">VA loans</a></li><li><a href="/fha-loans/">FHA loans</a></li><li><a href="/conventional-loans/">Conventional loans</a></li><li><a href="/first-time-home-buyers/">First-time buyers</a></li><li><a href="/jumbo-loans/">Jumbo loans</a></li><li><a href="/refinance/">Refinance</a></li></ul><p class="more-h">Washington</p><ul class="more-links"><li><a href="/seattle-wa-mortgage/">Seattle</a></li><li><a href="/tacoma-wa-mortgage/">Tacoma</a></li><li><a href="/everett-wa-mortgage/">Everett</a></li><li><a href="/olympia-wa-mortgage/">Olympia</a></li><li><a href="/spokane-wa-mortgage/">Spokane</a></li><li><a href="/lakewood-wa-mortgage/">Lakewood</a></li><li><a href="/redmond-wa-mortgage/">Redmond & Eastside</a></li><li><a href="/tri-cities-wa-mortgage/">Tri-Cities</a></li><li><a href="/jblm-va-loans/">VA loans near JBLM</a></li></ul><p class="more-h">Massachusetts</p><ul class="more-links"><li><a href="/boston-ma-mortgage/">Boston</a></li><li><a href="/worcester-ma-mortgage/">Worcester</a></li><li><a href="/springfield-ma-mortgage/">Springfield & Pioneer Valley</a></li><li><a href="/cape-cod-ma-mortgage/">Cape Cod</a></li></ul></div></div></section>
 </main>
-<footer class="site-foot"><div class="wrap"><div class="powered"><span>Powered by</span><img src="/images/edge-logo.png" alt="Edge Home Finance" width="306" height="88" loading="lazy" style="display:block;height:36px;width:auto"><span style="letter-spacing:.02em">NMLS #891464</span></div><p style="margin:0">Call or text my direct cell: <a href="tel:4135220497" style="font-weight:600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="font-weight:600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="font-weight:600">Instagram @hookandroostmortgage</a></p><ul class="foot-links"><li><a href="/">Home</a></li><li><a href="/#loans">Loan options</a></li><li><a href="/#areas">Areas I serve</a></li><li><a href="/for-realtors/">For realtors</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacy-policy/">Privacy policy</a></li></ul><p style="margin:0">Katie Luis-Hermina, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a>.</p><p style="margin:0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs, fees, limits and terms are subject to change. Not affiliated with or endorsed by the U.S. Department of Veterans Affairs, HUD, USDA or any branch of the military.</p><p style="margin:0">© 2026 Hook &amp; Roost Mortgage</p></div></footer>
+<footer class="site-foot"><div class="wrap"><div class="powered"><span>Powered by</span><img src="/images/edge-logo.png" alt="Edge Home Finance" width="306" height="88" loading="lazy" style="display:block;height:36px;width:auto"><span style="letter-spacing:.02em">NMLS #891464</span></div><p style="margin:0">Call or text my direct cell: <a href="tel:4135220497" style="font-weight:600">413-522-0497</a> · <a href="mailto:katie@hookandroostmortgage.com" style="font-weight:600">katie@hookandroostmortgage.com</a> · <a href="https://www.instagram.com/hookandroostmortgage/" target="_blank" rel="noopener" style="font-weight:600">Instagram @hookandroostmortgage</a></p><ul class="foot-links"><li><a href="/">Home</a></li><li><a href="/#loans">Loan options</a></li><li><a href="/#areas">Areas I serve</a></li><li><a href="/for-realtors/">For realtors</a></li><li><a href="/realtors/">Agents I trust</a></li><li><a href="/blog/">Blog</a></li><li><a href="/privacy-policy/">Privacy policy</a></li></ul><p style="margin:0">Katie Luis-Hermina, Loan Officer, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/2826935" target="_blank" rel="noopener">NMLS #2826935</a>. Licensed in Washington and Massachusetts. For other states (except New Jersey), assistance is available through Edge Home Finance. Loans offered through Edge Home Finance, <a href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/891464" target="_blank" rel="noopener">NMLS #891464</a>. <a href="https://www.nmlsconsumeraccess.org/" target="_blank" rel="noopener">NMLS Consumer Access</a>.</p><p style="margin:0">Equal Housing Opportunity. This is not a commitment to lend. All loans subject to credit approval, underwriting guidelines, and property eligibility. Programs, fees, limits and terms are subject to change. Not affiliated with or endorsed by the U.S. Department of Veterans Affairs, HUD, USDA or any branch of the military.</p><p style="margin:0">© 2026 Hook &amp; Roost Mortgage</p></div></footer>
 <div class="mbar" data-nosnippet><a class="mb-call" href="tel:4135220497">Call or text</a><a class="mb-cta" href="/#start">Check my options</a></div>
 <script>
 (function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;
